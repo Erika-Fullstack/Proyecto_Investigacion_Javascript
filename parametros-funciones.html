@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUNCIONES</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <h2>Parámetros en funciones JavaScript</h2>
+
+    <!-- Tabla css-grid. Para 2 columnas usar la clase combinada class= "tabla-grid col-02" para 3 col-03-->
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="encabezado">Ejemplo 1: Parámetros básicos (marcadores de posición)</div>
+
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
+        <code>
+    function saludar(nombre) {
+      console.log(`¡Hola, ${nombre}!`);
+  }
+  
+  saludar("María"); // Salida: ¡Hola, María!
+  saludar("Carlos"); // Salida: ¡Hola, Carlos!
+        </code>
+      </pre>
+      <p>nombre es un parámetro que actúa como un marcador de posición. Se sustituye por el valor que le pases al llamar a la función.</p>
+      </div>
+    </div>
+
+
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="encabezado">Ejemplo 2: Parámetros predeterminados</div>
+
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
+        <code>
+    function saludar(nombre = "Amigo") {
+      console.log(`¡Hola, ${nombre}!`);
+  }
+
+  saludar();           // Salida: ¡Hola, Amigo!
+  saludar("Sofía");    // Salida: ¡Hola, Sofía!
+        </code>
+      </pre>
+      <p>El valor "Amigo" es el valor predeterminado del parámetro nombre. Si no se pasa ningún argumento, se utiliza el valor por defecto.</p>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="encabezado">Ejemplo 3: Parámetros rest</div>
+
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
+        <code>
+    function sumar(...numeros) {
+      return numeros.reduce((acumulador, numero) =&gt; acumulador + numero, 0);
+  }
+  
+  console.log(sumar(1, 2, 3));             // Salida: 6
+  console.log(sumar(4, 5, 6, 7, 8));      // Salida: 30
+  console.log(sumar());                   // Salida: 0
+        
+        </code>
+      </pre>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="encabezado">Ejemplo 4: Valores de retorno</div>
+
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
+        <code>
+    function obtenerAreaRectangulo(base, altura) {
+      return base * altura; // Devuelve el área
+    }
+  
+    let area = obtenerAreaRectangulo(5, 3);
+    console.log(`El área del rectángulo es ${area}`); // Salida: El área del rectángulo es 15
+        
+
+        </code>
+      </pre>
+      <p>La función obtenerAreaRectangulo devuelve un valor (el producto de base y altura). Este valor puede almacenarse en una variable o utilizarse directamente.</p>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="encabezado">Ejemplo 5: Funciones flecha con parámetros</div>
+
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
+        <code>
+      const calculadora = {
+        sumar: function(a, b) {
+            return a + b;
+        },
+        restar: function(a, b) {
+            return a - b;
+        }
+      };
+
+      console.log(calculadora.sumar(3, 5)); // Salida: 8
+      console.log(calculadora.restar(9, 4)); // Salida: 5
+
+    </code>
+  </pre>
+        <p>Las funciones flecha ofrecen una sintaxis más compacta y no definen su propio this.</p>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="encabezado">Ejemplo 6: Función flecha con rest y retorno implícito</div>
+
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
+        <code>
+  const sumarNumeros = (...numeros) =&gt; numeros.reduce((acum, num) =&gt; acum + num, 0);
+
+  console.log(sumarNumeros(10, 20, 30)); // Salida: 60
+          
+
+    </code>
+  </pre>
+        <p>Combina el operador rest con una función flecha. No es necesario usar return porque el retorno es implícito.</p>
+      </div>
+    </div>
+    
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="encabezado">Ejemplo 7: Errores al acceder a parámetros fuera de la función</div>
+
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
+        <code>
+    function mostrarMensaje(mensaje) {
+      console.log(mensaje);
+  }
+  
+  mostrarMensaje("¡Hola!"); // Salida: ¡Hola!
+  
+  // console.log(mensaje); // Error: mensaje no está definido fuera de la función
+   </code>
+  </pre>
+        <p>El parámetro mensaje solo existe dentro del alcance (scope) de la función mostrarMensaje.</p>
+      </div>
+    </div>
+</main>
+
+
+</body>
+<!-- code-prettify https://github.com/googlearchive/code-prettify-->
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"> </script>
+
+<script src="parametros-funciones.js"></script>
+
+</html>

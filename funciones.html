@@ -13,12 +13,10 @@
   <main>
     <h2>Funciones Nominativas</h2>
 
- <!-- Tabla css-grid. Para 2 columnas usar la clase combinada class= "tabla-grid col-02" para 3 col-03-->
+    <!-- Tabla css-grid. Para 2 columnas usar la clase combinada class= "tabla-grid col-02" para 3 col-03-->
     <div class="tabla-grid">
       <!-- Encabezados -->
       <div class="encabezado">Ejemplo 1: Declaración de una función con nombre</div>
-
-
 
       <!-- Fila 1 -->
       <div class="celda">
@@ -34,24 +32,9 @@
         </code>
       </pre>
       </div>
-
-       <!-- Fila 1 -->
-      <div class="celda">
-        <pre class="prettyprint">
-        <code>
-  // Declaramos una función con nombre
-  function saludar() {
-    console.log("¡Hola, mundo!");
-  }
-  
-  // Llamamos a la función
-  saludar(); // Salida: ¡Hola, mundo!
-        </code>
-      </pre>
-      </div>
     </div>
-    
-    
+
+
     <div class="tabla-grid">
       <!-- Encabezados -->
       <div class="encabezado">Ejemplo 2: Función con parámetros</div>
@@ -66,9 +49,10 @@
   
   const resultado = sumar(3, 7);
   console.log(resultado); // Salida: 10
+  
         </code>
       </pre>
-      </div>       
+      </div>
     </div>
 
     <div class="tabla-grid">
@@ -83,13 +67,11 @@
     return `Hola, me llamo ${nombre}.`;
   }
   
-  console.log(presentar("Carlos")); 
-  // Salida: Hola, me llamo Carlos.
-  console.log(presentar("Ana"));    
-  // Salida: Hola, me llamo Ana.
+  console.log(presentar("Carlos")); // Salida: Hola, me llamo Carlos.
+  console.log(presentar("Ana")); // Salida: Hola, me llamo Ana.
         </code>
       </pre>
-      </div>       
+      </div>
     </div>
 
     <div class="tabla-grid">
@@ -106,30 +88,84 @@
   
   function describirRectangulo(base, altura) {
     const area = calcularAreaRectangulo(base, altura);
-    return `Un rectángulo de base ${base} 
-    y altura ${altura} tiene un área de ${area}.`;
+    return `Un rectángulo de base ${base} y altura ${altura} tiene un área de ${area}.`;
   }
   
   console.log(describirRectangulo(5, 8));
-  // Salida: Un rectángulo de base 5 
-  y altura 8 tiene un área de 40.
+  // Salida: Un rectángulo de base 5 y altura 8 tiene un área de 40.
 
         </code>
       </pre>
-      </div>       
+      </div>
     </div>
 
-   
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="encabezado">Ejemplo 5: Uso de una función nominativa dentro de un objeto</div>
+
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
+        <code>
+      const calculadora = {
+        sumar: function(a, b) {
+            return a + b;
+        },
+        restar: function(a, b) {
+            return a - b;
+        }
+      };
+
+      console.log(calculadora.sumar(3, 5)); // Salida: 8
+      console.log(calculadora.restar(9, 4)); // Salida: 5
+
+    </code>
+  </pre>
+        <p>En este caso, los métodos sumar y restar son funciones nominativas asignadas como propiedades del objeto
+          calculadora.</p>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="encabezado">Ejemplo 6: Uso de una función nominativa como métodos dentro de las clases</div>
+
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
+        <code>
+  class Persona {
+    constructor(nombre) {
+        this.nombre = nombre;
+    }
+      
+    saludar() {
+        return `Hola, soy ${this.nombre}`;
+    }
+  }
+  
+  const persona = new Persona("Carlos");
+  console.log(persona.saludar()); // Salida: Hola, soy Carlos
+          
+
+    </code>
+  </pre>
+        <p>En este caso, los métodos sumar y restar son funciones nominativas asignadas como propiedades del objeto
+          calculadora.</p>
+      </div>
+    </div>
+
+
     <h2>Funciones Anónimas</h2>
 
     <!-- Tabla css-grid -->
-       <div class="tabla-grid">
-         <!-- Encabezados -->
-         <div class="encabezado">Ejemplo 1: Función anónima básica</div>
-   
-        <!-- Fila 1 -->
-         <div class="celda">
-           <pre class="prettyprint">
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="encabezado">Ejemplo 1: Función anónima básica en una variable</div>
+
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
            <code>
   / Asignar una función anónima a una variable
   const suma = function (a, b) {
@@ -139,18 +175,19 @@
   console.log(suma(3, 4)); // 7
            </code>
          </pre>
-         <p>Aquí asignamos una función anónima a la variable suma, y luego la usamos como si fuera una función normal.</p>
-         </div>
-   
-       
-       </div>    <!-- Tabla css-grid -->
-       <div class="tabla-grid">
-         <!-- Encabezados -->
-         <div class="encabezado">Ejemplo 1: Función anónima básica</div>
-   
-        <!-- Fila 1 -->
-         <div class="celda">
-           <pre class="prettyprint">
+        <p>Aquí asignamos una función anónima a la variable suma, y luego la usamos como si fuera una función normal.
+        </p>
+      </div>
+
+
+    </div> <!-- Tabla css-grid -->
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="encabezado">Ejemplo 2: Usar una función anónima en un evento</div>
+
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
            <code>
   document.querySelector('button').addEventListener('click', function () {
     alert('¡Botón clickeado!');
@@ -158,19 +195,20 @@
             
            </code>
          </pre>
-         <p>La función que se pasa como segundo argumento a addEventListener es anónima. Esta es una de las aplicaciones más comunes.</p>
-         </div>
-   
-       
-       </div>    
-       <!-- Tabla css-grid -->
-       <div class="tabla-grid">
-         <!-- Encabezados -->
-         <div class="encabezado">Ejemplo 3: Función anónima como parámetro en un array</div>
-   
-        <!-- Fila 1 -->
-         <div class="celda">
-           <pre class="prettyprint">
+        <p>La función que se pasa como segundo argumento a addEventListener es anónima. Esta es una de las aplicaciones
+          más comunes.</p>
+      </div>
+
+
+    </div>
+    <!-- Tabla css-grid -->
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="encabezado">Ejemplo 3: Función anónima como parámetro en un array</div>
+
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
            <code>
   const numeros = [1, 2, 3, 4, 5];
 
@@ -183,19 +221,19 @@
             
            </code>
          </pre>
-         <p>Aquí usamos una función anónima directamente dentro del método .map()</p>
-         </div>
-   
-       
-       </div>
-       <!-- Tabla css-grid -->
-       <div class="tabla-grid">
-         <!-- Encabezados -->
-         <div class="encabezado">Ejemplo 4: Función anónima con una función autoejecutada</div>
-   
-        <!-- Fila 1 -->
-         <div class="celda">
-           <pre class="prettyprint">
+        <p>Aquí usamos una función anónima directamente dentro del método .map()</p>
+      </div>
+
+
+    </div>
+    <!-- Tabla css-grid -->
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="encabezado">Ejemplo 4: Función anónima con una función autoejecutada</div>
+
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
            <code>
   (function () {
     console.log('¡Esta es una función anónima autoejecutada!');
@@ -203,20 +241,21 @@
             
            </code>
          </pre>
-         <p>Aquí usamos una función anónima directamente dentro del método .map()</p>
-         </div>
-   
-       
-       </div>      
-       
-       <!-- Tabla css-grid -->
-       <div class="tabla-grid">
-         <!-- Encabezados -->
-         <div class="encabezado">Ejemplo 5: Función anónima con setTimeout</div>
-   
-        <!-- Fila 1 -->
-         <div class="celda">
-           <pre class="prettyprint">
+        <p>Esta es una función anónima que se ejecuta inmediatamente después de ser definida. Es útil para inicializar
+          código sin contaminar el espacio global.</p>
+      </div>
+
+
+    </div>
+
+    <!-- Tabla css-grid -->
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="encabezado">Ejemplo 5: Función anónima con setTimeout</div>
+
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
            <code>
   setTimeout(function () {
     console.log('Este mensaje aparece después de 2 segundos');
@@ -224,35 +263,65 @@
             
            </code>
          </pre>
-         <p>Pasamos una función anónima como argumento a setTimeout.</p>
-         </div>
-   
-       
-       </div>        <!-- Tabla css-grid -->
-       <div class="tabla-grid">
-         <!-- Encabezados -->
-         <div class="encabezado">Ejemplo 6: Comparación con funciones flecha</div>
-   
-        <!-- Fila 1 -->
-         <div class="celda">
-           <pre class="prettyprint">
+        <p>Pasamos una función anónima como argumento a setTimeout.</p>
+      </div>
+
+
+    </div>
+    <!-- Tabla css-grid -->
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="encabezado">Ejemplo 6: Comparación con funciones flecha</div>
+
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
            <code>
   const multiplicar = function (a, b) {
     return a * b;
   };
   
   // La misma función como función flecha (más moderna)
-  const multiplicarFlecha = (a, b) => a * b;
+  const multiplicarFlecha = (a, b) =&gt; a * b;
   
   console.log(multiplicar(3, 5)); // 15
   console.log(multiplicarFlecha(3, 5)); // 15
            </code>
          </pre>
-         <p>Pasamos una función anónima como argumento a setTimeout.</p>
-         </div>
-   
-       
-       </div> 
+        <p>Las funciones flecha son una forma más concisa de escribir funciones anónimas, pero tienen diferencias en
+          cómo manejan el contexto (this).</p>
+      </div>
+
+
+    </div> 
+    
+    <!-- Tabla css-grid -->
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="encabezado">Ejemplo 7: Uso de funciones anónimas en "closures"</div>
+
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
+           <code>
+  function contador() { 
+    let cuenta = 0; 
+    return function() { 
+    cuenta++; return cuenta; 
+    }; 
+    }
+    const incrementar = contador(); 
+    console.log(incrementar()); // Salida: 1 
+    console.log(incrementar()); // Salida: 2
+              
+           </code>
+         </pre>
+        <p>En este caso, la función anónima devuelta por contador recuerda el valor de la variable cuenta, incluso después de que la función contador haya terminado de ejecutarse.
+        </p>
+      </div>
+
+
+    </div>
 
 
 

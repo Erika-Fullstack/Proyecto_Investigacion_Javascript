@@ -8,16 +8,18 @@ h1, h2, h3{
 
 pre.prettyprint{
   font-size: 1rem;
-}
+  max-width: 50rem;
+  overflow: scroll;
 
+}
 
  /* Tablas CSS-Grid */
 .tabla-grid {
     display: grid;
     grid-template-columns: 1fr; 
     gap: 1px; 
+    min-width: 50rem;
     width: 50rem;
-    max-width: 50%;
     margin: 2rem auto;
   }
 
