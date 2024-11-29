@@ -1,13 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MÉTODOS PREDEFINIDOS</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metodos Predefinidos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    
+  <h1>JavaScript ejemplo</h1>
+
+  <!-- Buttons to trigger each function -->
+  <button onclick="showAlert()">Show Alert</button>
+  <button onclick="getPrompt()">Get User Input (Prompt)</button>
+  <button onclick="getConfirm()">Confirm Action</button>
+  <button onclick="showConsoleLog()">Show Console Log</button>
+  <button onclick="showDocumentwrite()">Show Documentwrite</button>
+
+  <script>
+    // Alert Function
+    function showAlert() {
+      alert("¡Hola, este es un mensaje de alerta!");
+    }
+
+    // Prompt Function
+    function getPrompt() {
+      const userInput = prompt("¿Cual es tu nombre?", "John Doe");
+      if (userInput) {
+        alert("Hola, " + userInput + "!");
+      } else {
+        alert("Hola, ${nombre}");
+      }
+    }
+
+    // Confirm Function
+    function getConfirm() {
+      const userConfirmed = confirm("¿Estas seguro de continuar?");
+      if (userConfirmed) {
+        alert("Continuando...");
+      } else {
+        alert("Operacion cancelada");
+      }
+    }
+
+    // Console Log Function
+    function showConsoleLog() {
+      console.log("Este es un mensaje en la consola.");
+      console.log("You can check the browser's Developer Tools to see the output.");
+       
+      let numero = 42;
+      console.log("El numero es:", numero);
+    } 
+
+    //Document Write Function
+     function showdocumentwrite(){
+      documentwrite(contenido);
+      documentwrite("<h1>¡Hola, mundo!</h1>");
+     }
+
+  </script>
 </body>
-<script src="met-predef.js"></script>
 </html>
