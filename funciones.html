@@ -1,63 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FUNCIONES</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUNCIONES</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <main>
-        <h2>Funciones Nominativas</h2>
-        
-        <div class="tabla-grid">
-    <!-- Encabezados -->
-    <div class="celda encabezado">Ejemplo 1: Declaración de una función con nombre</div>
+  <main>
+    <h2>Funciones Nominativas</h2>
 
- 
-    <!-- Fila 1 -->
-    <div class="celda">Dato 1</div>
- 
- 
+ <!-- Tabla css-grid. Para 2 columnas usar la clase combinada class= "tabla-grid col-02" para 3 col-03-->
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="celda encabezado">Ejemplo 1: Declaración de una función con nombre</div>
 
 
-  </div>
 
-  <div class="tabla-grid col-03">
-    <!-- Encabezados -->
-    <div class="celda encabezado">Ejemplo 1</div>
-    <div class="celda encabezado">Ejemplo 1</div>
-    <div class="celda encabezado">Ejemplo 1</div>
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
+        <code>
+          // Declaramos una función con nombre
+          function saludar() {
+            console.log("¡Hola, mundo!");
+          }
+          
+          // Llamamos a la función
+          saludar(); // Salida: ¡Hola, mundo!
+        </code>
+      </pre>
+      </div>
 
- 
-    <!-- Fila 1 -->
-    <div class="celda">Dato 1</div>
-    <div class="celda">Dato 2</div>
-    <div class="celda">Dato 3</div>
+       <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
+        <code>
+          // Declaramos una función con nombre
+          function saludar() {
+            console.log("¡Hola, mundo!");
+          }
+          
+          // Llamamos a la función
+          saludar(); // Salida: ¡Hola, mundo!
+        </code>
+      </pre>
+      </div>
+    </div>
+    
+    
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="celda encabezado">Ejemplo 2: Función con parámetros</div>
 
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
+        <code>
+          function sumar(a, b) {
+            return a + b;
+          }
+          
+          const resultado = sumar(3, 7);
+          console.log(resultado); // Salida: 10
+        </code>
+      </pre>
+      </div>       
+    </div>
 
-  </div>
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="celda encabezado">Ejemplo 3: Función que devuelve un mensaje personalizado</div>
 
-  <div class="tabla-grid col-04">
-    <!-- Encabezados -->
-    <div class="celda encabezado">Ejemplo 1</div>
-    <div class="celda encabezado">Ejemplo 1</div>
-    <div class="celda encabezado">Ejemplo 1</div>
-    <div class="celda encabezado">Ejemplo 1</div>
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
+        <code>
+          function presentar(nombre) {
+            return `Hola, me llamo ${nombre}.`;
+          }
+          
+          console.log(presentar("Carlos")); // Salida: Hola, me llamo Carlos.
+          console.log(presentar("Ana"));    // Salida: Hola, me llamo Ana.
+        </code>
+      </pre>
+      </div>       
+    </div>
 
- 
-    <!-- Fila 1 -->
-    <div class="celda">Dato 1</div>
-    <div class="celda">Dato 2</div>
-    <div class="celda">Dato 3</div>
-    <div class="celda">Dato 3</div>
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="celda encabezado">Ejemplo 4: Uso de una función nominativa dentro de otra función</div>
 
+      <!-- Fila 1 -->
+      <div class="celda">
+        <pre class="prettyprint">
+        <code>
+          function calcularAreaRectangulo(base, altura) {
+            return base * altura;
+          }
+          
+          function describirRectangulo(base, altura) {
+            const area = calcularAreaRectangulo(base, altura);
+            return `Un rectángulo de base ${base} y altura ${altura} tiene un área de ${area}.`;
+          }
+          
+          console.log(describirRectangulo(5, 8));
+          // Salida: Un rectángulo de base 5 y altura 8 tiene un área de 40.
+          
+        </code>
+      </pre>
+      </div>       
+    </div>
 
-  </div>
+    
 
-    </main>
+  </main>
 
 
 </body>
+<!-- code-prettify -->
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"> </script>
+
 <script src="funciones.js"></script>
+
 </html>
