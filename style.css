@@ -41,4 +41,17 @@ h1, h2, h3{
     background-color: #f4f4f4;
   }
 
+  /* esto es para pagina met-predef */
+  .container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .btn {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
  
