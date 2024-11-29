@@ -2,13 +2,23 @@ h1, h2, h3{
     text-align: center;
 }
 
+
+
+ /* Estilo Código */
+
+pre.prettyprint{
+  font-size: 1rem;
+}
+
+
+ /* Tablas CSS-Grid */
 .tabla-grid {
     display: grid;
     grid-template-columns: 1fr; 
     gap: 1px; 
-    background-color: black; 
-    max-width: 75%;
-    margin: 0 auto;
+    width: 50rem;
+    max-width: 50%;
+    margin: 2rem auto;
   }
 
   .col-02 {
@@ -34,12 +44,19 @@ h1, h2, h3{
     padding: 8px;
     border: 1px solid black;
     text-align: left;
+    margin-bottom: 1rem;
   }
 
   .encabezado {
-    font-weight: bold;
     background-color: #f4f4f4;
+    padding: 8px;
+    border: 1px solid black;
+    text-align: left;
+    font-weight: bold;
+
   }
+ /* ----------------------------------- */
+
 
   /* esto es para pagina met-predef */
   .container {
