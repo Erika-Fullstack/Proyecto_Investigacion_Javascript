@@ -35,6 +35,6 @@ let myCv = {
    year :"2025"
 };
 
-//Const//
-const PlanB = BigInt (200000000)
+//BigInt//
+let PlanB = BigInt (200000000)
 
