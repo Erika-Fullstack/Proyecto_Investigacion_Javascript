@@ -53,4 +53,3 @@ class Persona {
         return `Hola, soy ${this.nombre}`;
     }
   }
-
