@@ -72,5 +72,55 @@ pre.prettyprint{
     font-size: 16px;
     cursor: pointer;
   }
+ /* ----------------------------------- */
 
- 
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+  }
+
+  .links {
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+  }
+
+  .links:hover {
+    opacity: 80%;
+    box-shadow: 0 5px grey;
+    transform: scale(1.05);
+  }
+
+  .var {
+    padding: 2rem;
+    background-color: #cfaacd;
+    border-radius: 2rem;
+  }
+
+  .tipos {
+    padding: 2rem;
+    background-color: #b5d26f;
+    border-radius: 2rem;
+  }
+
+  .met {
+    padding: 2rem;
+    background-color: #b8b9b8;
+    border-radius: 2rem;
+  }
+
+  .funciones {
+    padding: 2rem;
+    background-color: #fdbb9f;
+    border-radius: 2rem;
+  }
+
+  .para {
+    padding: 2rem;
+    background-color: #b6c9de;
+    border-radius: 2rem;
+  }
