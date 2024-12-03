@@ -11,7 +11,7 @@
         <h2>Variables y Constantes</h2>
 
         <div class="tabla-grid">
-            <div class="encabezado-ejem"> Ejemplo Símbolo (Symbol) </div>
+            <div class="encabezado-ejem var"> Ejemplo Símbolo (Symbol) </div>
                 <div class="celda-ejem">
                     <pre class="prettyprint">
                     <code>
@@ -32,7 +32,7 @@
             </div>
             
             <div class="tabla-grid">
-              <div class="encabezado-ejem"> Ejemplo Nulo (Null)</div>
+              <div class="encabezado-ejem var"> Ejemplo Nulo (Null)</div>
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
@@ -51,7 +51,7 @@
             </div>
 
             <div class="tabla-grid">
-              <div class="encabezado-ejem"> Ejemplo Indefinido (Undefined)</div>
+              <div class="encabezado-ejem var"> Ejemplo Indefinido (Undefined)</div>
               
                       <div class="celda-ejem">
                           <pre class="prettyprint">
@@ -74,7 +74,7 @@
             
 
             <div class="tabla-grid">
-              <div class="encabezado-ejem"> Ejemplo Cadena (String)</div>
+              <div class="encabezado-ejem var"> Ejemplo Cadena (String)</div>
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
@@ -93,7 +93,7 @@
            
 
             <div class="tabla-grid">
-              <div class="encabezado-ejem"> Ejemplo Funciones (Function)</div>
+              <div class="encabezado-ejem var"> Ejemplo Funciones (Function)</div>
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
@@ -115,7 +115,7 @@
            
 
             <div class="tabla-grid">
-              <div class="encabezado-ejem"> Ejemplo Número</div>
+              <div class="encabezado-ejem var"> Ejemplo Número</div>
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
@@ -136,7 +136,7 @@
           
 
             <div class="tabla-grid">
-              <div class="encabezado-ejem"> Ejemplo Arreglo (Array)</div>
+              <div class="encabezado-ejem var"> Ejemplo Arreglo (Array)</div>
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
@@ -156,7 +156,7 @@
     
 
             <div class="tabla-grid">
-              <div class="encabezado-ejem"> Ejemplo Booleano (Boolean) </div>
+              <div class="encabezado-ejem var"> Ejemplo Booleano (Boolean) </div>
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
@@ -177,7 +177,7 @@
        
 
             <div class="tabla-grid">
-              <div class="encabezado-ejem"> Ejemplo Objeto (Object) </div>
+              <div class="encabezado-ejem var"> Ejemplo Objeto (Object) </div>
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
@@ -200,7 +200,7 @@
 
 
             <div class="tabla-grid">
-              <div class="encabezado-ejem"> Ejemplo BigInt </div>
+              <div class="encabezado-ejem var"> Ejemplo BigInt </div>
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
@@ -217,7 +217,7 @@
             </div>
                  
             <div class="tabla-grid">
-              <div class="encabezado-ejem"> Ejemplo Date:</div>
+              <div class="encabezado-ejem var"> Ejemplo Date</div>
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
@@ -236,7 +236,7 @@
             
 
         <div class="tabla-grid">
-          <div class="encabezado-ejem"> Ejemplo Set</div>
+          <div class="encabezado-ejem var"> Ejemplo Set</div>
               <div class="celda-ejem">
                   <pre class="prettyprint">
                   <code>
@@ -260,20 +260,22 @@
  
 
         <div class="tabla-grid">
-          <div class="encabezado-ejem"> Ejemplo Map </div>
+          <div class="encabezado-ejem var"> Ejemplo Map </div>
               <div class="celda-ejem">
                   <pre class="prettyprint">
                   <code>
-              // Creamos un Map vacío:
-              let mySet = new Map ();
-          
-              //Agregamos elementos al Map. Usamos método .set (clave,valor) para agregar pares de clave-valor al Map
-              myMap.set ("userName","Carla Siles")
-              mySet.set ("age",29);
-              mySet.set ("profession", "Full-stack developer");
-            
-              // Llamamos a la variable. Usamos .get (clave) para obtener el valor asociado con la clave especifica.
-              console.log (myMap.get ("useName")); //salida: Carla Siles
+            // Creamos un Map vacío:
+            let mySet = new Map ();
+
+            /* Agregamos elementos al Map. Usamos método .set (clave,valor) 
+            para agregar pares de clave-valor al Map */
+            myMap.set ("userName","Carla Siles")
+            mySet.set ("age",29);
+            mySet.set ("profession", "Full-stack developer");
+
+            /* Llamamos a la variable. Usamos .get (clave) para obtener 
+            el valor asociado con la clave especifica. */
+            console.log (myMap.get ("useName")); //salida: Carla Siles
           
                   </code>
                 </pre>
@@ -283,7 +285,7 @@
 
 
         <div class="tabla-grid">
-          <div class="encabezado-ejem"> Ejemplo RegExp </div>
+          <div class="encabezado-ejem var"> Ejemplo RegExp </div>
               <div class="celda-ejem">
                   <pre class="prettyprint">
                   <code>
@@ -298,14 +300,13 @@
             
               // Llamamos a la variable
               console.log (result) // salida: ["hello"]
-          
                   </code>
                 </pre>
           <p>Útil para realizar búsquedas y validaciones en texto mediante patrones.</p>
               </div>
         </div>
 
-          </div>
+
     </main>
 </body>
 <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"> </script>

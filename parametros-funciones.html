@@ -15,19 +15,19 @@
 
     <!-- Tabla css-grid. Para 2 columnas usar la clase combinada class= "tabla-grid col-02" para 3 col-03-->
     <div class="tabla-grid">
-      <!-- Encabezados -->
-      <div class="encabezado">Ejemplo 1: Parámetros básicos (marcadores de posición)</div>
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">Ejemplo 1: Parámetros básicos (marcadores de posición)</div>
 
       <!-- Fila 1 -->
-      <div class="celda">
+      <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-    function saludar(nombre) {
-      console.log(`¡Hola, ${nombre}!`);
-  }
-  
-  saludar("Marta"); // Salida: ¡Hola, Marta!
-  saludar("Carlos"); // Salida: ¡Hola, Carlos!
+                    function saludar(nombre) {
+                      console.log(`¡Hola, ${nombre}!`);
+                  }
+                  
+                  saludar("Marta"); // Salida: ¡Hola, Marta!
+                  saludar("Carlos"); // Salida: ¡Hola, Carlos!
         </code>
       </pre>
       <p>nombre es un parámetro que actúa como un marcador de posición. Se sustituye por el valor que le pases al llamar a la función.</p>
@@ -36,19 +36,19 @@
 
 
     <div class="tabla-grid">
-      <!-- Encabezados -->
-      <div class="encabezado">Ejemplo 2: Parámetros predeterminados</div>
+      <!-- encabezado-ejem para-ejem paras -->
+      <div class="encabezado-ejem para">Ejemplo 2: Parámetros predeterminados</div>
 
       <!-- Fila 1 -->
-      <div class="celda">
+      <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-    function saludar(nombre = "Amigo") {
-      console.log(`¡Hola, ${nombre}!`);
-  }
+                function saludar(nombre = "Amigo") {
+                  console.log(`¡Hola, ${nombre}!`);
+              }
 
-  saludar();           // Salida: ¡Hola, Amigo!
-  saludar("Sofía");    // Salida: ¡Hola, Sofía!
+              saludar();           // Salida: ¡Hola, Amigo!
+              saludar("Sofía");    // Salida: ¡Hola, Sofía!
         </code>
       </pre>
       <p>El valor "Amigo" es el valor predeterminado del parámetro nombre. Si no se pasa ningún argumento, se utiliza el valor por defecto.</p>
@@ -56,11 +56,11 @@
     </div>
 
     <div class="tabla-grid">
-      <!-- Encabezados -->
-      <div class="encabezado">Ejemplo 3: Parámetros rest</div>
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">Ejemplo 3: Parámetros rest</div>
 
       <!-- Fila 1 -->
-      <div class="celda">
+      <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
     function sumar(...numeros) {
@@ -77,19 +77,20 @@
     </div>
 
     <div class="tabla-grid">
-      <!-- Encabezados -->
-      <div class="encabezado">Ejemplo 4: Valores de retorno</div>
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">Ejemplo 4: Valores de retorno</div>
 
       <!-- Fila 1 -->
-      <div class="celda">
+      <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-    function obtenerAreaRectangulo(base, altura) {
-      return base * altura; // Devuelve el área
-    }
-  
-    let area = obtenerAreaRectangulo(5, 3);
-    console.log(`El área del rectángulo es ${area}`); // Salida: El área del rectángulo es 15
+              function obtenerAreaRectangulo(base, altura) {
+                return base * altura; // Devuelve el área
+              }
+            
+              let area = obtenerAreaRectangulo(5, 3);
+              console.log(`El área del rectángulo es ${area}`); 
+              // Salida: El área del rectángulo es 15
         
 
         </code>
@@ -99,16 +100,16 @@
     </div>
 
     <div class="tabla-grid">
-      <!-- Encabezados -->
-      <div class="encabezado">Ejemplo 5: Funciones flecha con parámetros</div>
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">Ejemplo 5: Funciones flecha con parámetros</div>
 
       <!-- Fila 1 -->
-      <div class="celda">
+      <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          const multiplicar = (a, b) =&gt; a * b;
+              const multiplicar = (a, b) =&gt; a * b;
 
-          console.log(multiplicar(4, 5)); // Salida: 20
+              console.log(multiplicar(4, 5)); // Salida: 20
 
     </code>
   </pre>
@@ -117,11 +118,11 @@
     </div>
 
     <div class="tabla-grid">
-      <!-- Encabezados -->
-      <div class="encabezado">Ejemplo 6: Función flecha con rest y retorno implícito</div>
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">Ejemplo 6: Función flecha con rest y retorno implícito</div>
 
       <!-- Fila 1 -->
-      <div class="celda">
+      <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
 const sumarNumeros = (...numeros) =&gt; numeros.reduce((acum, num) =&gt; acum + num, 0);
@@ -137,20 +138,22 @@ console.log(sumarNumeros(10, 20, 30)); // Salida: 60
     </div>
     
     <div class="tabla-grid">
-      <!-- Encabezados -->
-      <div class="encabezado">Ejemplo 7: Errores al acceder a parámetros fuera de la función</div>
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">Ejemplo 7: Errores al acceder a parámetros fuera de la función</div>
 
       <!-- Fila 1 -->
-      <div class="celda">
+      <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-    function mostrarMensaje(mensaje) {
-      console.log(mensaje);
-  }
-  
-  mostrarMensaje("¡Hola!"); // Salida: ¡Hola!
-  
-  // console.log(mensaje); // Error: mensaje no está definido fuera de la función
+              function mostrarMensaje(mensaje) {
+                console.log(mensaje);
+            }
+            
+            mostrarMensaje("¡Hola!"); 
+            // Salida: ¡Hola!
+            
+            // console.log(mensaje); 
+            // Error: mensaje no está definido fuera de la función
    </code>
   </pre>
         <p>El parámetro mensaje solo existe dentro del alcance (scope) de la función mostrarMensaje.</p>
