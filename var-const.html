@@ -11,23 +11,24 @@
         <h2>Variables y Constantes</h2>
 
         <div class="tabla-grid">
-            <div class="encabezado-ejem var"> Ejemplo Símbolo (Symbol) </div>
-                <div class="celda-ejem">
-                    <pre class="prettyprint">
-                    <code>
-                // Declaramos una variable Symbol 
-                let uniqueId = symbol ("id")
-                let hiddenKey = Symbol("hidden")
-                        
-                          
-                // Llamamos a la variable
-                console.log(uniqueId); //salida: Symbol(id)
-                console.log(hiddenkey); //salida: Symbol(hidden)
-                    </code>
-                  </pre>
-                  <p>Identificador único utilizado para propiedades de ojetos.</p>
-                </div>
             
+            <div class="tabla-grid">
+                <div class="encabezado-ejem var"> Ejemplo Indefinido (Undefined)</div>
+                
+                        <div class="celda-ejem">
+                            <pre class="prettyprint">
+                            <code>
+                    // Declaramos una variable  Undefined
+                    let userName;         
+                                                 
+                    // Llamamos a la variable
+                    console.log (userName); //salida undefined
+                
+                            </code>
+                          </pre>
+                <p> Cuando una variable se ha declarado pero no se le ha asignado un valor.</p>
+                        </div>
+              </div>
 
             </div>
             
@@ -36,12 +37,11 @@
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
-                  // Declaramos una variable NUll 
-                  let selectedProduct = null;
-              
-                
-                  // Llamamos a la variable
-                  console.log(selectedProduct); // salida: null
+                    // Declaramos una variable NUll 
+                    let selectedProduct = null;
+                                   
+                    // Llamamos a la variable
+                    console.log(selectedProduct); // salida: null
               
                       </code>
                     </pre>
@@ -49,41 +49,18 @@
                   </div>
               
             </div>
-
-            <div class="tabla-grid">
-              <div class="encabezado-ejem var"> Ejemplo Indefinido (Undefined)</div>
-              
-                      <div class="celda-ejem">
-                          <pre class="prettyprint">
-                          <code>
-                  // Declaramos una variable  Undefined
-                  let name;
-              
-                    
-                  // Llamamos a la variable
-                  console.log (name); //salida undefined
-              
-                          </code>
-                        </pre>
-              <p> Cuando una variable se ha declarado pero no se le ha asignado un valor.</p>
-                      </div>
-            </div>
     
-                
-
-            
 
             <div class="tabla-grid">
               <div class="encabezado-ejem var"> Ejemplo Cadena (String)</div>
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
-                  // Declaramos una variable String
-                  let userName = "Carla Siles"
-              
-                
-                  // Llamamos a la variable
-                  console.log(userName); // salida: "Carla Siles"
+                    // Declaramos una variable String
+                    let userName = "Carla Siles"
+                                   
+                    // Llamamos a la variable
+                    console.log(userName); // salida: "Carla Siles"  
                       </code>
                     </pre>
               <p>Contiene secuencias de caracteres, como texto. </p>
@@ -97,14 +74,14 @@
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
-                  // Declaramos una variable Function
-                  let greet = function(name) {
-                  return `Hola, ${name}!`;
-                  };
-              
-                
-                  // Llamamos a la variable
-                  console.log(greet("Carla")); //salida: "Hola,Carla!"
+
+                    // Declaramos una variable Function
+                    let greet = function(name) {
+                    return `Hola, ${name}!`;
+                    };
+                                        
+                    // Llamamos a la variable
+                    console.log(greet("Carla")); //salida: "Hola,Carla!"
               
                       </code>
                     </pre>
@@ -119,13 +96,13 @@
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
-                  // Declaramos una variable Number
-                  let age = 29;
-                  let height = 1.60;
-                
-                  // Llamamos a la variable
-                  console.log(age); //Salida:29
-                  console.log(height); //slaida: 1.60
+                    // Declaramos una variable Number
+                    let age = 29;
+                    let height = 1.60;
+                                       
+                    // Llamamos a la variable
+                    console.log(age); //Salida:29
+                    console.log(height); //salida: 1.6
               
                       </code>
                     </pre>
@@ -140,12 +117,11 @@
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
-            // Declaramos una variable Array
-            let lenguajes = ["HTML","CSS","JavaScript"];
-        
-          
-            // Llamamos a la variable
-            console.log(lenguajes); // salida: ["HTML","CSS","JavaScript"];
+                    // Declaramos una variable Array
+                    let lenguajes = ["HTML","CSS","JavaScript"];
+                                    
+                    // Llamamos a la variable
+                    console.log(lenguajes); // salida: ["HTML","CSS","JavaScript"];
               
                       </code>
                     </pre>
@@ -160,13 +136,14 @@
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
-                  // Declaramos una variable Booleano
-                  let isStudent = true
-                  let isTeacher = false;
-                
-                  // Llamamos a la variable
-                  console.log (isStudent); //salida: true
-                  console.log (isTeacher); //salida: false
+                    // Declaramos una variable Booleano
+                    let isStudent = true
+                    let isTeacher = false;
+                                  
+                    // Llamamos a la variable
+                    console.log (isStudent); //salida: true
+                    console.log (isTeacher); //salida: false
+                        
               
                       </code>
                     </pre>
@@ -181,15 +158,15 @@
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
-            // Declaramos una variable Object
-            let myCv = {
-            profession :"full-Stack Developer",
-            year :"2025"
-              };
-        
-          
-            // Llamamos a la variable
-            console.log(myCv); // salida: { profession:"full-stack Developer",year: "2025"}
+                    // Declaramos una variable Object
+                    let myCv = {
+                    profession :"full-Stack Developer",
+                    year :"2025"
+                     }; 
+                                      
+                    // Llamamos a la variable
+                    console.log(myCv); // salida:{ profession:"full-stack Developer",year: "2025"}
+                        
               
                       </code>
                     </pre>
@@ -204,29 +181,52 @@
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
-                  // Declaramos una variable BigInt
-                  let PlanB = BigInt (2000000000000000)
-              
-                
-                  // Llamamos a la variable
-                  console.log(planB); //salida:2000000000000000n
+                    // Declaramos una variable BigInt
+                    let PlanB = BigInt (2000000000000000)
+                                      
+                    // Llamamos a la variable
+                    console.log(PlanB); //salida:2000000000000000n
+
                       </code>
                     </pre>
               <p>Para manejar números enteros grandes.</p>
                   </div>
             </div>
-                 
+            
+            <div class="tabla-grid">
+                <div class="encabezado-ejem var"> Ejemplo Symbol</div>
+                    <div class="celda-ejem">
+                        <pre class="prettyprint">
+                        <code>
+                    // Creamos una expresión regular para buscar palabras
+                    let regex= /hello/i;
+                        
+                    //Usamos la expresión regular 
+                    let text = "Hello, world!";
+                         
+                    // BUscamos coincidencias
+                    let result = text.match(regex);
+                         
+                    // Llamamos a la variable
+                    console.log (result); // salida: ["hello"]
+                
+                        </code>
+                      </pre>
+                <p> Identificador único utilizado para propiedades de objetos</p>
+                    </div>
+              </div>
+            
+
             <div class="tabla-grid">
               <div class="encabezado-ejem var"> Ejemplo Date</div>
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
-                  // Declaramos una variable Date
-                  let today = new Date ();
-              
-                
-                  // Llamamos a la variable 
-                  console.log ("Fecha actual:",today)// salida: 04/12/2024
+                    // Declaramos una variable Date
+                    let today = new Date ();
+                                  
+                    // Llamamos a la variable 
+                    console.log ("Fecha actual:",today)// salida: 04.12.2024
               
                       </code>
                     </pre>
@@ -240,16 +240,16 @@
               <div class="celda-ejem">
                   <pre class="prettyprint">
                   <code>
-              // Creamos un Set
-              let mySet = new Set ();
-          
-              //Agregar algunos valores al Set
-              mySet.add (1)
-              mySet.add (2)
-              mySet.add (3)
-            
-              // Llamamos a la variable 
-              console.log (mySet); //salida: Set { 1, 2, 3}
+                // Creamos un Set
+                let mySet = new Set ();
+                  
+                //Agregar algunos valores al Set
+                mySet.add (1)
+                mySet.add (2)
+                mySet.add (3)
+                          
+                // Llamamos a la variable 
+                console.log (mySet); //salida: Set { 1, 2, 3}
           
                   </code>
                 </pre>
@@ -264,18 +264,16 @@
               <div class="celda-ejem">
                   <pre class="prettyprint">
                   <code>
-            // Creamos un Map vacío:
-            let mySet = new Map ();
-
-            /* Agregamos elementos al Map. Usamos método .set (clave,valor) 
-            para agregar pares de clave-valor al Map */
-            myMap.set ("userName","Carla Siles")
-            mySet.set ("age",29);
-            mySet.set ("profession", "Full-stack developer");
-
-            /* Llamamos a la variable. Usamos .get (clave) para obtener 
-            el valor asociado con la clave especifica. */
-            console.log (myMap.get ("useName")); //salida: Carla Siles
+                // Creamos un Map vacío:
+                let myMap = new Map ();
+                 
+                //Agregamos elementos al Map. Usamos método .set (clave,valor) para agregar pares de clave-valor al Map
+                myMap.set ("userName","Carla Siles")
+                myMap.set ("age",29);
+                myMap.set ("profession", "Full-stack developer");
+                 
+                // Llamamos a la variable. Usamos .get (clave) para obtener el valor asociado con la clave especifica.
+                console.log (myMap.get ("userName")); //salida: Carla Siles
           
                   </code>
                 </pre>
@@ -289,17 +287,18 @@
               <div class="celda-ejem">
                   <pre class="prettyprint">
                   <code>
-              // Creamos una expresión regular para buscar palabras
-              let regex= "hello;"
-          
-              //Usamos la expresión regular 
-              let text= "Hello, world!";
-          
-              // BUscamos coincidencias
-              let result = text.match (regex)
-            
-              // Llamamos a la variable
-              console.log (result) // salida: ["hello"]
+                // Creamos una expresión regular para buscar palabras
+                let regex= /hello/i;
+                
+                //Usamos la expresión regular 
+                let text = "Hello, world!";
+                 
+                // Buscamos coincidencias
+                let result = text.match(regex);
+                 
+                // Llamamos a la variable
+                console.log (result); // salida: ["hello"]
+              
                   </code>
                 </pre>
           <p>Útil para realizar búsquedas y validaciones en texto mediante patrones.</p>

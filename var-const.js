@@ -1,25 +1,25 @@
     //Ejemplos variables y const//
 
  // Declaramos una variable  Undefined
- let userName;
-                
+ let userName;         
                   
  // Llamamos a la variable
  console.log (userName); //salida undefined
 
+
  // Declaramos una variable NUll 
  let selectedProduct = null;
-          
             
  // Llamamos a la variable
  console.log(selectedProduct); // salida: null
 
+
  // Declaramos una variable String
  let userName = "Carla Siles"
             
-              
  // Llamamos a la variable
  console.log(userName); // salida: "Carla Siles"  
+
 
  // Declaramos una variable Function
  let greet = function(name) {
@@ -37,6 +37,7 @@ let height = 1.60;
 // Llamamos a la variable
 console.log(age); //Salida:29
 console.log(height); //salida: 1.6
+
 
 // Declaramos una variable Array
 let lenguajes = ["HTML","CSS","JavaScript"];
@@ -79,7 +80,7 @@ console.log(PlanB); //salida:2000000000000000n
     [hiddenKey]: "hiddenData" // otra propiedad (esconder)
 
   };
-          
+  
   // Llamamos a la variable
   console.log(user[uniqueId]); //salida: "79111111"
   console.log(user[hiddenKey]); //salida: "hiddenData"
