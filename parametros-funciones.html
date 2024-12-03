@@ -106,17 +106,9 @@
       <div class="celda">
         <pre class="prettyprint">
         <code>
-      const calculadora = {
-        sumar: function(a, b) {
-            return a + b;
-        },
-        restar: function(a, b) {
-            return a - b;
-        }
-      };
+          const multiplicar = (a, b) =&gt; a * b;
 
-      console.log(calculadora.sumar(3, 5)); // Salida: 8
-      console.log(calculadora.restar(9, 4)); // Salida: 5
+          console.log(multiplicar(4, 5)); // Salida: 20
 
     </code>
   </pre>
@@ -132,9 +124,10 @@
       <div class="celda">
         <pre class="prettyprint">
         <code>
-  const sumarNumeros = (...numeros) =&gt; numeros.reduce((acum, num) =&gt; acum + num, 0);
+const sumarNumeros = (...numeros) =&gt; numeros.reduce((acum, num) =&gt; acum + num, 0);
 
-  console.log(sumarNumeros(10, 20, 30)); // Salida: 60
+console.log(sumarNumeros(10, 20, 30)); // Salida: 60
+
           
 
     </code>
