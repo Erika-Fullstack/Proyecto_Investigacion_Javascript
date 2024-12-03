@@ -1,0 +1,65 @@
+h1, h2, h3{
+    text-align: center;
+}
+
+
+
+ /* Estilo Código */
+
+pre.prettyprint{
+  font-size: 1rem;
+  max-width: 50rem;
+  overflow-X: auto;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+
+}
+
+ /* Tablas CSS-Grid */
+
+ .col-02, .col-03, .col-04 {
+    display: grid;
+    gap: 5px;
+    background-color: #e0f7fa;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.col-02 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.col-03 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.col-04 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/*       Estilos Celda */
+  .celda {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+    transition: transform 0.2s ease;
+  }
+  .celda:hover {
+    transform: scale(1.02);
+  }
+
+  
+
+  .encabezado {
+    background-color: #b2ebf2;
+    padding: 12px;
+    border: 1px solid #aaa;
+    text-align: center;
+    font-weight: bold;
+
+  }
+ /* ----------------------------------- */
