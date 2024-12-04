@@ -9,8 +9,9 @@ function saludar(nombre = "Amigo") {
 }
 
 /* Parámetros rest */
-function sumar(...numeros) {
-    return numeros.reduce((acumulador, numero) => acumulador + numero, 0);
+function listarFrutas(...frutas) {
+    console.log("Frutas recibidas:");
+    frutas.forEach((fruta) => console.log(fruta));
 }
 
 /* Valores de retorno */
