@@ -20,12 +20,8 @@ function obtenerAreaRectangulo(base, altura) {
 
   let area = obtenerAreaRectangulo(5, 3);
 
-
-  /* Funciones flecha con parámetros */
+/* Funciones flecha con parámetros */
   const multiplicar = (a, b) => a * b;
-
-/* Función flecha con rest y retorno implícito */
-const sumarNumeros = (...numeros) => numeros.reduce((acum, num) => acum + num, 0);
 
 /* Errores al acceder a parámetros fuera de la función */
 function mostrarMensaje(mensaje) {
