@@ -24,14 +24,17 @@ function sumar(a, b) {
   }
 
 // Ejemplo 4: Uso de una función nominativa dentro de otra función
-function calcularAreaRectangulo(base, altura) {
-    return base * altura;
-  }
-  
-  function describirRectangulo(base, altura) {
-    const area = calcularAreaRectangulo(base, altura);
-    return `Un rectángulo de base ${base} y altura ${altura} tiene un área de ${area}.`;
-  }
+function usarSuma(a, b) {
+  return sumar(a, b); // Llama a la función 'sumar' dentro de 'usarSuma'
+}
+
+// Función nominativa para sumar dos números
+function sumar(x, y) {
+  return x + y;
+}
+
+// Usamos 'usarSuma' con la función 'sumar'
+//console.log(usarSuma(5, 3));  8
 
 // Ejemplo 5: Uso de una función nominativa dentro de un objeto
 const calculadora = {
@@ -53,3 +56,8 @@ class Persona {
         return `Hola, soy ${this.nombre}`;
     }
   }
+
+const persona = new Persona("Agatha");
+// console.log(persona.saludar()); 
+// Salida: Hola, soy Carlos
+

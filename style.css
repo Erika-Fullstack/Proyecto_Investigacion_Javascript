@@ -8,6 +8,8 @@ h1 {
     text-align: center;
     font-family: "Philosopher";
     font-size: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #b6c9de;
 }
 
 h2, h3{
@@ -95,7 +97,7 @@ pre.prettyprint{
   
 .celda-ejem p{
     width: 80%;
-  margin: 1.5rem auto;
+  margin: -1rem auto 1rem;
   background-color: #fffccc;
   padding: 1rem;
   border-radius: 1rem;

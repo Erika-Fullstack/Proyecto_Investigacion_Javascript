@@ -12,6 +12,8 @@
 
 <body>
   <main>
+
+    <h1>TIPOS DE FUNCIONES</h1>
     <h2>Funciones Nominativas</h2>
 
     <!-- Tabla css-grid. Para 2 columnas usar la clase combinada class= "tabla-grid col-02" para 3 col-03-->
@@ -23,15 +25,16 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-  // Declaramos una función con nombre
-  function saludar() {
-    console.log("¡Hola, mundo!");
-  }
-  
-  // Llamamos a la función
-  saludar(); // Salida: ¡Hola, mundo!
+                  // Declaramos una función con nombre
+                  function saludar() {
+                    console.log("¡Hola, mundo!");
+                  }
+
+                  // Llamamos a la función
+                  saludar(); // Salida: ¡Hola, mundo!
         </code>
       </pre>
+      <p>La función es definida con el nombre "saludar"</p>
       </div>
     </div>
 
@@ -43,15 +46,16 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-  function sumar(a, b) {
-    return a + b;
-  }
-  
-  const resultado = sumar(3, 7);
-  console.log(resultado); // Salida: 10
+                    function sumar(a, b) {
+                      return a + b;
+                    }
+                    
+                    const resultado = sumar(3, 7);
+                    console.log(resultado); // Salida: 10
   
         </code>
       </pre>
+      <p>Las funciones pueden tener parámetros</p>
       </div>
     </div>
 
@@ -63,12 +67,14 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-  function presentar(nombre) {
-    return `Hola, me llamo ${nombre}.`;
-  }
-  
-  console.log(presentar("Carlos")); // Salida: Hola, me llamo Carlos.
-  console.log(presentar("Ana")); // Salida: Hola, me llamo Ana.
+                  function presentar(nombre) {
+                    return `Hola, me llamo ${nombre}.`;
+                  }
+                  
+                  console.log(presentar("Carlos")); 
+                  // Salida: Hola, me llamo Carlos.
+                  console.log(presentar("Ana")); 
+                  // Salida: Hola, me llamo Ana.
         </code>
       </pre>
       </div>
@@ -82,20 +88,21 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-  function calcularAreaRectangulo(base, altura) {
-    return base * altura;
-  }
-  
-  function describirRectangulo(base, altura) {
-    const area = calcularAreaRectangulo(base, altura);
-    return `Un rectángulo de base ${base} y altura ${altura} tiene un área de ${area}.`;
-  }
-  
-  console.log(describirRectangulo(5, 8));
-  // Salida: Un rectángulo de base 5 y altura 8 tiene un área de 40.
+      function usarSuma(a, b) {
+        return sumar(a, b); // Llama a la función 'sumar' dentro de 'usarSuma'
+      }
+      
+      // Función nominativa para sumar dos números
+      function sumar(x, y) {
+        return x + y;
+      }
+      
+      // Usamos 'usarSuma' con la función 'sumar'
+      console.log(usarSuma(5, 3)); // 8
 
         </code>
       </pre>
+      <p>Es básicamente una función (usarSuma) que depende de otra función (sumar) para hacer su trabajo.</p>
       </div>
     </div>
 
@@ -107,18 +114,18 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-      const calculadora = {
-        sumar: function(a, b) {
-            return a + b;
-        },
-        restar: function(a, b) {
-            return a - b;
-        }
-      };
 
-      console.log(calculadora.sumar(3, 5)); // Salida: 8
-      console.log(calculadora.restar(9, 4)); // Salida: 5
+                const calculadora = {
+                  sumar: function(a, b) {
+                      return a + b;
+                  },
+                  restar: function(a, b) {
+                      return a - b;
+                  }
+                };
 
+                console.log(calculadora.sumar(3, 5)); // Salida: 8
+                console.log(calculadora.restar(9, 4)); // Salida: 5
     </code>
   </pre>
         <p>En este caso, los métodos sumar y restar son funciones nominativas asignadas como propiedades del objeto
@@ -134,20 +141,19 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-  class Persona {
-    constructor(nombre) {
-        this.nombre = nombre;
-    }
-      
-    saludar() {
-        return `Hola, soy ${this.nombre}`;
-    }
-  }
-  
-  const persona = new Persona("Carlos");
-  console.log(persona.saludar()); // Salida: Hola, soy Carlos
-          
-
+                      class Persona {
+                        constructor(nombre) {
+                            this.nombre = nombre;
+                        }
+                          
+                        saludar() {
+                            return `Hola, soy ${this.nombre}`;
+                        }
+                      }
+                      
+                      const persona = new Persona("Carlos");
+                      console.log(persona.saludar()); 
+                      // Salida: Hola, soy Carlos
     </code>
   </pre>
         <p>En este caso, los métodos sumar y restar son funciones nominativas asignadas como propiedades del objeto
@@ -167,12 +173,11 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
            <code>
-  / Asignar una función anónima a una variable
-  const suma = function (a, b) {
-    return a + b;
-  };
-  
-  console.log(suma(3, 4)); // 7
+                  const suma = function (a, b) {
+                  return a + b;
+                };
+                
+                console.log(suma(3, 4)); // 7
            </code>
          </pre>
         <p>Aquí asignamos una función anónima a la variable suma, y luego la usamos como si fuera una función normal.
@@ -189,10 +194,10 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
            <code>
-  document.querySelector('button').addEventListener('click', function () {
-    alert('¡Botón clickeado!');
-  });
-            
+                document.querySelector('button')
+                .addEventListener('click', function () {
+                  alert('¡Botón clickeado!');
+                });            
            </code>
          </pre>
         <p>La función que se pasa como segundo argumento a addEventListener es anónima. Esta es una de las aplicaciones
@@ -210,18 +215,15 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
            <code>
-  const numeros = [1, 2, 3, 4, 5];
+              const numeros = [1, 2, 3, 4, 5];
 
-  // Usamos una función anónima dentro de .map()
-  const cuadrados = numeros.map(function (num) {
-    return num * num;
-  });
-  
-  console.log(cuadrados); // [1, 4, 9, 16, 25]
-            
+              // Usamos una función anónima dentro de forEach
+              numeros.forEach(function (numero) {
+                console.log(`El número es: ${numero}`);
+              });         
            </code>
          </pre>
-        <p>Aquí usamos una función anónima directamente dentro del método .map()</p>
+        <p>Este enfoque es común para realizar operaciones en cada elemento de un array sin transformar los datos</p>
       </div>
 
 
@@ -235,10 +237,10 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
            <code>
-  (function () {
-    console.log('¡Esta es una función anónima autoejecutada!');
-  })();
-            
+          (function () {
+            console.log('¡Esta es una función anónima autoejecutada!');
+          })();
+                    
            </code>
          </pre>
         <p>Esta es una función anónima que se ejecuta inmediatamente después de ser definida. Es útil para inicializar
@@ -257,10 +259,10 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
            <code>
-  setTimeout(function () {
-    console.log('Este mensaje aparece después de 2 segundos');
-  }, 2000);
-            
+            setTimeout(function () {
+              console.log('Este mensaje aparece después de 2 segundos');
+            }, 2000);
+                      
            </code>
          </pre>
         <p>Pasamos una función anónima como argumento a setTimeout.</p>
@@ -268,51 +270,26 @@
 
 
     </div>
-    <!-- Tabla css-grid -->
-    <div class="tabla-grid">
-      <!-- Encabezados -->
-      <div class="encabezado-ejem funciones">Ejemplo 6: Comparación con funciones flecha</div>
-
-      <!-- Fila 1 -->
-      <div class="celda-ejem">
-        <pre class="prettyprint">
-           <code>
-  const multiplicar = function (a, b) {
-    return a * b;
-  };
-  
-  // La misma función como función flecha (más moderna)
-  const multiplicarFlecha = (a, b) =&gt; a * b;
-  
-  console.log(multiplicar(3, 5)); // 15
-  console.log(multiplicarFlecha(3, 5)); // 15
-           </code>
-         </pre>
-        <p>Las funciones flecha son una forma más concisa de escribir funciones anónimas, pero tienen diferencias en
-          cómo manejan el contexto (this).</p>
-      </div>
-
-
-    </div> 
+   
     
     <!-- Tabla css-grid -->
     <div class="tabla-grid">
       <!-- Encabezados -->
-      <div class="encabezado-ejem funciones">Ejemplo 7: Uso de funciones anónimas en "closures"</div>
+      <div class="encabezado-ejem funciones">Ejemplo 6: Uso de funciones anónimas en "closures"</div>
 
       <!-- Fila 1 -->
       <div class="celda-ejem">
         <pre class="prettyprint">
            <code>
-  function contador() { 
-    let cuenta = 0; 
-    return function() { 
-    cuenta++; return cuenta; 
-    }; 
-    }
-    const incrementar = contador(); 
-    console.log(incrementar()); // Salida: 1 
-    console.log(incrementar()); // Salida: 2
+                    function contador() { 
+                      let cuenta = 0; 
+                      return function() { 
+                      cuenta++; return cuenta; 
+                      }; 
+                      }
+                      const incrementar = contador(); 
+                      console.log(incrementar()); // Salida: 1 
+                      console.log(incrementar()); // Salida: 2
               
            </code>
          </pre>
