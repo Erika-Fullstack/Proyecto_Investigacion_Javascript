@@ -62,6 +62,10 @@
                         
                     // Llamamos a la variable
                     console.log(userName); // salida: "Carla Siles"
+
+                    //otra forma de llamarlo
+                    typeof(userName); salida: "carla siles"
+
                       </code>
                     </pre>
               <p>Contiene secuencias de caracteres, como texto. </p>
@@ -103,6 +107,9 @@
                     // Llamamos a las variables
                     console.log(age); // salida: 29
                     console.log(height); // salida: 1.6
+
+                    //otra forma de llamarlo:
+                    typeof(age); "number"
               
                       </code>
                     </pre>
@@ -117,15 +124,16 @@
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
-                    // Declaramos una variable Array
-                    let languages = ["HTML", "CSS", "JavaScript"];
-                        
-                    // Llamamos a la variable
-                    console.log(languages); // salida: ["HTML", "CSS", "JavaScript"]
+        // Declaramos una variable Array
+        let languages = ["HTML", "CSS", "JavaScript"];
+            
+        // Llamamos a la variable
+        console.log(languages); // salida: ["HTML", "CSS", "JavaScript"]
 
-                    // Podemos acceder a un valor concreto del array de la siguiente manera:
-                    console.log(languages[2]); //salida: "JavaScript"
-                    //Los valores en el array comienzan desde 0
+        // Podemos acceder a un valor concreto del array de la siguiente manera:
+        console.log(languages[2]); //salida: "JavaScript"
+
+        //Los valores en el array comienzan desde 0
 
                       </code>
                     </pre>
@@ -147,6 +155,9 @@
                     // Llamamos a las variables
                     console.log(isStudent); // salida: true
                     console.log(isTeacher); // salida: false
+
+                    //Otra forma de llamarlo
+                    typeof(isStudent); salida: "boolean"
                         
               
                       </code>
@@ -162,17 +173,17 @@
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
-                    // Declaramos una variable Object
-                    let myCv = {
-                    profession: "full-Stack Developer",
-                    year: "2025"
-                     };
-                        
-                    // Llamamos a la variable
-                    console.log(myCv); // salida: { profession: "full-Stack Developer", year: "2025" }
+  // Declaramos una variable Object
+  let myCv = {
+  profession: "full-Stack Developer",
+  year: "2025"
+    };
+      
+  // Llamamos a la variable
+  console.log(myCv); // salida: { profession: "full-Stack Developer", year: "2025" }
 
-                    //Podemos acceder a una propiedad concreta de la siguiente manera:
-                    console.log(myCv.profession); //salida "full-Stack-Developer"
+  //Podemos acceder a una propiedad concreta de la siguiente manera:
+  console.log(myCv.profession); //salida "full-Stack-Developer"
                         
               
                       </code>
@@ -188,12 +199,12 @@
                   <div class="celda-ejem">
                       <pre class="prettyprint">
                       <code>
-                    // Declaramos una variable BigInt
-                    let PlanB = BigInt(2000000000000000);
-                        
-                    // Llamamos a la variable
-                    console.log(PlanB); // salida: 2000000000000000n
-
+                // Declaramos una variable BigInt
+                let PlanB = BigInt(2000000000000000);
+                    
+                // Llamamos a la variable
+                console.log(PlanB); // salida: 2000000000000000n
+                
                       </code>
                     </pre>
               <p>Para manejar números enteros grandes.</p>
@@ -205,21 +216,21 @@
                     <div class="celda-ejem">
                         <pre class="prettyprint">
                         <code>
-                    // Creamos un objeto con propiedades privadas usando Symbol
-                    const userProfile = Symbol('userProfile');
-                    const userPassword = Symbol('userPassword');
-                    let user = {
-                        name: "Carla",
-                        age: 29,
-                        [userProfile]: "carlasiles1", 
-                        [userPassword]: "12345" };
-                    
-                    // Llamamos a las propiedades privadas
-                    console.log(user[userProfile]); // salida: "carlasiles1"
-                    console.log(user[userPassword]); // salida: "12345"
+        // Creamos un objeto con propiedades privadas usando Symbol
+        const userProfile = Symbol('userProfile');
+        const userPassword = Symbol('userPassword');
+        let user = {
+            name: "Carla",
+            age: 29,
+            [userProfile]: "carlasiles1", 
+            [userPassword]: "12345" };
+        
+        // Llamamos a las propiedades privadas
+        console.log(user[userProfile]); // salida: "carlasiles1"
+        console.log(user[userPassword]); // salida: "12345"
 
-                    //El valor no se muestra si accedemos a la propiedad de forma habitual.
-                    console.log(user.userProfile);//salida: undefined
+        //El valor no se muestra si accedemos a la propiedad de forma habitual.
+            console.log(user.userProfile);//salida: undefined
                 
                         </code>
                       </pre>
@@ -234,11 +245,11 @@
                       <pre class="prettyprint">
                       <code>
 
-                    // Declaramos una variable Date
-                    let today = new Date();
-                    
-                    // Llamamos a la variable
-                    console.log("Fecha actual:", today); // salida: fecha actual
+                // Declaramos una variable Date
+                let today = new Date();
+                  
+                // Llamamos a la variable
+                console.log("Fecha actual:", today); // salida: fecha actual
               
                       </code>
                     </pre>
@@ -252,22 +263,22 @@
               <div class="celda-ejem">
                   <pre class="prettyprint">
                   <code>
-                    // Creamos un Set
-                    let mySet = new Set();
+            // Creamos un Set
+            let mySet = new Set();
                     
-                    // Agregar valores al Set
-                    mySet.add(1);
-                    mySet.add(2);
-                    mySet.add(3);
+            // Agregar valores al Set
+            mySet.add(1);
+            mySet.add(2);
+            mySet.add(3);
                     
-                    // Llamamos a la variable
-                    console.log(mySet); // salida: Set { 1, 2, 3 }
+            // Llamamos a la variable
+            console.log(mySet); // salida: Set { 1, 2, 3 }
 
-                    //agregamos un valor repetido
-                    mySet.add(1);
+            //agregamos un valor repetido
+            mySet.add(1);
 
-                    //llamamos a la variable
-                    console.log(mySet); // salida: Set { 1, 2, 3 } (no se agrega otro 1)
+            //llamamos a la variable
+            console.log(mySet); // salida: Set { 1, 2, 3 } (no se agrega otro 1)
           
                   </code>
                 </pre>
@@ -282,16 +293,16 @@
               <div class="celda-ejem">
                   <pre class="prettyprint">
                   <code>
-                    // Creamos un Map
-                    let myMap = new Map();
-                    
-                    // Agregamos elementos al Map
-                    myMap.set("userName", "Carla Siles");
-                    myMap.set("age", 29);
-                    myMap.set("profession", "Full-stack developer");
-                    
-                    // Llamamos a las claves del Map
-                    console.log(myMap.get("userName")); // salida: "Carla Siles"
+              // Creamos un Map
+              let myMap = new Map();
+              
+              // Agregamos elementos al Map
+              myMap.set("userName", "Carla Siles");
+              myMap.set("age", 29);
+              myMap.set("profession", "Full-stack developer");
+              
+              // Llamamos a las claves del Map
+              console.log(myMap.get("userName")); // salida: "Carla Siles"
           
                   </code>
                 </pre>
