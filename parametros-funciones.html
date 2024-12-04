@@ -22,12 +22,12 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-                    function saludar(nombre) {
-                      console.log(`¡Hola, ${nombre}!`);
-                  }
-                  
-                  saludar("Marta"); // Salida: ¡Hola, Marta!
-                  saludar("Carlos"); // Salida: ¡Hola, Carlos!
+                      function saludar(nombre) {
+                        console.log(`¡Hola, ${nombre}!`);
+                    }
+                    
+                    saludar("Marta"); // Salida: ¡Hola, Marta!
+                    saludar("Carlos"); // Salida: ¡Hola, Carlos!
         </code>
       </pre>
       <p>nombre es un parámetro que actúa como un marcador de posición. Se sustituye por el valor que le pases al llamar a la función.</p>
@@ -43,12 +43,12 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-                function saludar(nombre = "Amigo") {
-                  console.log(`¡Hola, ${nombre}!`);
-              }
+                      function saludar(nombre = "Amigo") {
+                        console.log(`¡Hola, ${nombre}!`);
+                    }
 
-              saludar();           // Salida: ¡Hola, Amigo!
-              saludar("Sofía");    // Salida: ¡Hola, Sofía!
+                    saludar();           // Salida: ¡Hola, Amigo!
+                    saludar("Sofía");    // Salida: ¡Hola, Sofía!
         </code>
       </pre>
       <p>El valor "Amigo" es el valor predeterminado del parámetro nombre. Si no se pasa ningún argumento, se utiliza el valor por defecto.</p>
@@ -63,15 +63,16 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          function listarFrutas(...frutas) {
-            console.log("Frutas recibidas:");
-            frutas.forEach((fruta) =&gt; console.log(fruta));
-        }
-        
-        listarFrutas("Manzana", "Plátano", "Cereza");
-
-        </code>
-      </pre>
+                      function listarFrutas(...frutas) {
+                        console.log("Frutas recibidas:");
+                        frutas.forEach((fruta) =&gt; console.log(fruta));
+                      }
+              
+                      listarFrutas("Manzana", "Plátano", "Cereza");
+        </code></pre>
+        <p>Al definir el parámetro (...frutas) le decimos a 
+          la función que todos los parámetros que reciba los convierta en un array. 
+          Esto nos es útil cuando no sabemos el número de argumentos que va a recibir una función en concreto</p>
       </div>
     </div>
 
@@ -83,13 +84,13 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-              function obtenerAreaRectangulo(base, altura) {
-                return base * altura; // Devuelve el área
-              }
-            
-              let area = obtenerAreaRectangulo(5, 3);
-              console.log(`El área del rectángulo es ${area}`); 
-              // Salida: El área del rectángulo es 15
+                      function obtenerAreaRectangulo(base, altura) {
+                        return base * altura; // Devuelve el área
+                      }
+                    
+                      let area = obtenerAreaRectangulo(5, 3);
+                      console.log(`El área del rectángulo es ${area}`); 
+                      // Salida: El área del rectángulo es 15
         
 
         </code>
@@ -106,14 +107,15 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
+                      // Manera clásica de escribir una función
+                      const multiplicar = function (a, b) {
+                        return a * b;
+                      };
+                      
+                      // Manera moderna de función flecha
+                      const multiplicar = (a, b) =&gt; a * b;
 
-          const multiplicar = function (a, b) {
-            return a * b;
-          };
-          
-          const multiplicar = (a, b) =&gt; a * b;
-
-          console.log(multiplicar(4, 5)); // Salida: 20
+                      console.log(multiplicar(4, 5)); // Salida: 20
 
     </code>
   </pre>
@@ -129,15 +131,15 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-              function mostrarMensaje(mensaje) {
-                console.log(mensaje);
-            }
-            
-            mostrarMensaje("¡Hola!"); 
-            // Salida: ¡Hola!
-            
-            // console.log(mensaje); 
-            // Error: mensaje no está definido fuera de la función
+                        function mostrarMensaje(mensaje) {
+                          console.log(mensaje);
+                      }
+                      
+                      mostrarMensaje("¡Hola!"); 
+                      // Salida: ¡Hola!
+                      
+                      // console.log(mensaje); 
+                      // Error: mensaje no está definido fuera de la función
    </code>
   </pre>
         <p>El parámetro mensaje solo existe dentro del alcance (scope) de la función mostrarMensaje.</p>

@@ -61,3 +61,9 @@ const persona = new Persona("Agatha");
 // console.log(persona.saludar()); 
 // Salida: Hola, soy Carlos
 
+
+//ANÓNIMAS Ejemplo: 2
+document.querySelector('button')
+.addEventListener('click', function () {
+  alert('¡Botón clickeado!');
+});            

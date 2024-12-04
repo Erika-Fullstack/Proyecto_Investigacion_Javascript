@@ -82,82 +82,90 @@
 
     <div class="tabla-grid">
       <!-- Encabezados -->
-      <div class="encabezado-ejem funciones">Ejemplo 4: Uso de una función nominativa dentro de otra función</div>
+      <div class="encabezado-ejem funciones">Ejemplo 4:Función nominativa dentro de otra función</div>
 
       <!-- Fila 1 -->
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-      function usarSuma(a, b) {
-        return sumar(a, b); // Llama a la función 'sumar' dentro de 'usarSuma'
-      }
-      
-      // Función nominativa para sumar dos números
-      function sumar(x, y) {
-        return x + y;
-      }
-      
-      // Usamos 'usarSuma' con la función 'sumar'
-      console.log(usarSuma(5, 3)); // 8
+              function operacionMatematica(a, b, operacion) {
+                return operacion(a, b); 
+                // Llama a la función pasada como argumento
+              }
+              
+              // Función nominativa para sumar
+              function sumar(x, y) {
+                return x + y;
+              }
+              
+              // Función nominativa para multiplicar
+              function multiplicar(x, y) {
+                return x * y;
+              }
+              
+              // Usamos las funciones nominativas dentro de otra función
+              console.log(operacionMatematica(5, 3, sumar));       // 8
+              console.log(operacionMatematica(5, 3, multiplicar)); // 15
 
         </code>
       </pre>
-      <p>Es básicamente una función (usarSuma) que depende de otra función (sumar) para hacer su trabajo.</p>
+      <p>Aquí hemos creado la función operacionMatematica que tiene 3 argumentos. Dos de ellos (a y b) son números y operación será una función, "sumar" o "restar".
+        Definimos las funciones y después las llamamos como argumento.
+      </p>
       </div>
     </div>
 
     <div class="tabla-grid">
       <!-- Encabezados -->
-      <div class="encabezado-ejem funciones">Ejemplo 5: Uso de una función nominativa dentro de un objeto</div>
+      <div class="encabezado-ejem funciones">Ejemplo 5: Función nominativa dentro de un objeto</div>
 
       <!-- Fila 1 -->
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
 
-                const calculadora = {
-                  sumar: function(a, b) {
-                      return a + b;
-                  },
-                  restar: function(a, b) {
-                      return a - b;
-                  }
-                };
-
-                console.log(calculadora.sumar(3, 5)); // Salida: 8
-                console.log(calculadora.restar(9, 4)); // Salida: 5
-    </code>
-  </pre>
-        <p>En este caso, los métodos sumar y restar son funciones nominativas asignadas como propiedades del objeto
-          calculadora.</p>
-      </div>
-    </div>
-
-    <div class="tabla-grid">
-      <!-- Encabezados -->
-      <div class="encabezado-ejem funciones">Ejemplo 6: Uso de una función nominativa como métodos dentro de las clases</div>
-
-      <!-- Fila 1 -->
-      <div class="celda-ejem">
-        <pre class="prettyprint">
-        <code>
-                      class Persona {
-                        constructor(nombre) {
-                            this.nombre = nombre;
-                        }
-                          
-                        saludar() {
-                            return `Hola, soy ${this.nombre}`;
-                        }
+                    const calculadora = {
+                      sumar: function(a, b) {
+                          return a + b;
+                      },
+                      restar: function(a, b) {
+                          return a - b;
                       }
-                      
-                      const persona = new Persona("Carlos");
-                      console.log(persona.saludar()); 
-                      // Salida: Hola, soy Carlos
+                    };
+
+                    console.log(calculadora.sumar(3, 5)); // Salida: 8
+                    console.log(calculadora.restar(9, 4)); // Salida: 5
     </code>
   </pre>
         <p>En este caso, los métodos sumar y restar son funciones nominativas asignadas como propiedades del objeto
           calculadora.</p>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- Encabezados -->
+      <div class="encabezado-ejem funciones">Ejemplo 6: Función nominativa como métodos en clases</div>
+
+      <!-- Fila 1 -->
+      <div class="celda-ejem">
+        <pre class="prettyprint">
+        <code>
+                          class Persona {
+                            constructor(nombre) {
+                                this.nombre = nombre;
+                            }
+                              
+                            saludar() {
+                                return `Hola, soy ${this.nombre}`;
+                            }
+                          }
+                          
+                          const persona = new Persona("Carlos");
+                          console.log(persona.saludar()); 
+                          // Salida: Hola, soy Carlos
+        </code>
+  </pre>
+        <p>En este caso, el método saludar es una función nominativa que forma parte de la instancia persona..</p>
       </div>
     </div>
 
@@ -173,11 +181,11 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
            <code>
-                  const suma = function (a, b) {
-                  return a + b;
-                };
-                
-                console.log(suma(3, 4)); // 7
+                            const suma = function (a, b) {
+                            return a + b;
+                          };
+                          
+                          console.log(suma(3, 4)); // 7
            </code>
          </pre>
         <p>Aquí asignamos una función anónima a la variable suma, y luego la usamos como si fuera una función normal.
@@ -188,20 +196,26 @@
     </div> <!-- Tabla css-grid -->
     <div class="tabla-grid">
       <!-- Encabezados -->
-      <div class="encabezado-ejem funciones">Ejemplo 2: Usar una función anónima en un evento</div>
+      <div class="encabezado-ejem funciones">Ejemplo 2: Función anónima en un evento</div>
 
       <!-- Fila 1 -->
       <div class="celda-ejem">
         <pre class="prettyprint">
            <code>
-                document.querySelector('button')
-                .addEventListener('click', function () {
-                  alert('¡Botón clickeado!');
-                });            
+                          document.querySelector('button')
+                          .addEventListener('click', function () {
+                            alert('¡Botón clickeado!');
+                          });            
            </code>
          </pre>
-        <p>La función que se pasa como segundo argumento a addEventListener es anónima. Esta es una de las aplicaciones
-          más comunes.</p>
+         <div style="text-align: center;">
+          <button class="btn-ejem tipos">BOTÓN</button>
+          <p>La función que se pasa como segundo argumento a addEventListener es anónima. Esta es una de las aplicaciones
+            más comunes.</p>
+         </div>
+ 
+          
+  
       </div>
 
 
@@ -220,7 +234,12 @@
               // Usamos una función anónima dentro de forEach
               numeros.forEach(function (numero) {
                 console.log(`El número es: ${numero}`);
-              });         
+              });  
+              
+              /* Aunque la manera más habitual es unar una función
+                 flecha */
+              numeros.forEach((elemento) =&gt; console.log(`El número es: ${elemento}`));
+
            </code>
          </pre>
         <p>Este enfoque es común para realizar operaciones en cada elemento de un array sin transformar los datos</p>
@@ -282,18 +301,23 @@
         <pre class="prettyprint">
            <code>
                     function contador() { 
+
                       let cuenta = 0; 
                       return function() { 
-                      cuenta++; return cuenta; 
-                      }; 
+                             cuenta++; 
+                             return cuenta; 
+                             }; 
                       }
                       const incrementar = contador(); 
+
                       console.log(incrementar()); // Salida: 1 
                       console.log(incrementar()); // Salida: 2
               
            </code>
          </pre>
-        <p>En este caso, la función anónima devuelta por contador recuerda el valor de la variable cuenta, incluso después de que la función contador haya terminado de ejecutarse.
+         <p>Un closure (o clausura) en JavaScript es una función que "recuerda" el contexto en el que fue creada, incluso después de que dicho contexto haya terminado de ejecutarse.</p>
+        <br>
+         <p>En este caso, la función anónima devuelta por contador recuerda el valor de la variable cuenta, incluso después de que la función contador haya terminado de ejecutarse.
         </p>
       </div>
 
