@@ -77,15 +77,15 @@
                       <code>
                     // Declaramos una variable Function
                     let greet = function (name) {
-                    return `Hola, ${name}!`;
-};
+                    return `Hola, ${name}!`; };
 
                     // Llamamos a la variable
                     console.log(greet("Carla")); // salida: "Hola, Carla!"
                     
                       </code>
                     </pre>
-              <p> Un bloque de código reutilizable que puede ser llamado. </p>
+              <p> En este ejemplo, estamos asignando a una variable un bloque de código que realiza una operación específica.
+                 Esto significa que la variable no solo puede almacenar datos primitivos como números o cadenas, sino también funcionalidad, permitiéndonos invocar esa funcionalidad cuando sea necesario usando la variable.. </p>
                   </div>
             </div>
 
@@ -118,10 +118,14 @@
                       <pre class="prettyprint">
                       <code>
                     // Declaramos una variable Array
-                    let lenguajes = ["HTML", "CSS", "JavaScript"];
+                    let languages = ["HTML", "CSS", "JavaScript"];
                         
                     // Llamamos a la variable
-                    console.log(lenguajes); // salida: ["HTML", "CSS", "JavaScript"]         
+                    console.log(languages); // salida: ["HTML", "CSS", "JavaScript"]
+
+                    // Podemos acceder a un valor concreto del array de la siguiente manera:
+                    console.log(languages[2]); //salida: "JavaScript"
+                    //Los valores en el array comienzan desde 0
 
                       </code>
                     </pre>
@@ -166,6 +170,9 @@
                         
                     // Llamamos a la variable
                     console.log(myCv); // salida: { profession: "full-Stack Developer", year: "2025" }
+
+                    //Podemos acceder a una propiedad concreta de la siguiente manera:
+                    console.log(myCv.profession); //salida "full-Stack-Developer"
                         
               
                       </code>
@@ -199,17 +206,20 @@
                         <pre class="prettyprint">
                         <code>
                     // Creamos un objeto con propiedades privadas usando Symbol
-                    const uniqueId = Symbol('uniqueId');
-                    const hiddenKey = Symbol('hiddenKey');
+                    const userProfile = Symbol('userProfile');
+                    const userPassword = Symbol('userPassword');
                     let user = {
                         name: "Carla",
                         age: 29,
-                        [uniqueId]: "79111111", 
-                        [hiddenKey]: "hiddenData" };
+                        [userProfile]: "carlasiles1", 
+                        [userPassword]: "12345" };
                     
                     // Llamamos a las propiedades privadas
-                    console.log(user[uniqueId]); // salida: "79111111"
-                    console.log(user[hiddenKey]); // salida: "hiddenData"
+                    console.log(user[userProfile]); // salida: "carlasiles1"
+                    console.log(user[userPassword]); // salida: "12345"
+
+                    //El valor no se muestra si accedemos a la propiedad de forma habitual.
+                    console.log(user.userProfile);//salida: undefined
                 
                         </code>
                       </pre>
@@ -252,6 +262,12 @@
                     
                     // Llamamos a la variable
                     console.log(mySet); // salida: Set { 1, 2, 3 }
+
+                    //agregamos un valor repetido
+                    mySet.add(1);
+
+                    //llamamos a la variable
+                    console.log(mySet); // salida: Set { 1, 2, 3 } (no se agrega otro 1)
           
                   </code>
                 </pre>
@@ -300,6 +316,15 @@
                     
                     // Llamamos a la variable
                     console.log(result); // salida: ["Hello"]
+
+                    //creamos la expresión regular:
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                    // Ejemplo de uso:
+                    const email = "carla@hotmail.com";
+                    console.log(emailRegex.test(email)); // salida: true
+                    
+
               
                   </code>
                 </pre>

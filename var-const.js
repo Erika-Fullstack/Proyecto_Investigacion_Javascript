@@ -35,10 +35,10 @@ console.log(age); // salida: 29
 console.log(height); // salida: 1.6
 
 // Declaramos una variable Array
-let lenguajes = ["HTML", "CSS", "JavaScript"];
+let languages = ["HTML", "CSS", "JavaScript"];
 
 // Llamamos a la variable
-console.log(lenguajes); // salida: ["HTML", "CSS", "JavaScript"]
+console.log(languages); // salida: ["HTML", "CSS", "JavaScript"]
 
 // Declaramos variables Boolean
 let isStudent = true;
@@ -63,19 +63,19 @@ let PlanB = BigInt(2000000000000000);
 // Llamamos a la variable
 console.log(PlanB); // salida: 2000000000000000n
 
-// Creamos un objeto con propiedades privadas usando Symbol
-const uniqueId = Symbol('uniqueId');
-const hiddenKey = Symbol('hiddenKey');
-let user = {
-    name: "Carla",
-    age: 29,
-    [uniqueId]: "79111111", 
-    [hiddenKey]: "hiddenData" 
-};
-
-// Llamamos a las propiedades privadas
-console.log(user[uniqueId]); // salida: "79111111"
-console.log(user[hiddenKey]); // salida: "hiddenData"
+ // Creamos un objeto con propiedades privadas usando Symbol
+ const userProfile = Symbol('userProfile');
+ const userPassword = Symbol('userPassword');
+ let user = {
+     name: "Carla",
+     age: 29,
+     [userProfile]: "carlasiles1", 
+     [userPassword]: "12345" };
+ 
+ // Llamamos a las propiedades privadas
+ console.log(user[userProfile]); // salida: "carlasiles1"
+ console.log(user[userPassword]); // salida: "12345"
+ 
 
 // Declaramos una variable Date
 let today = new Date();
