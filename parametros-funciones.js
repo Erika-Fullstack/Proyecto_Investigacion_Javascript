@@ -29,4 +29,10 @@ function mostrarMensaje(mensaje) {
     console.log(mensaje);
 }
 
-mostrarMensaje("¡Hola!");
+//mostrarMensaje("¡Hola!");
+
+function nombreFuncion(...rest) {
+    
+    // 'rest' es un array que contiene 
+    // el resto de los argumentos
+}
