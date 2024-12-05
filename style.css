@@ -134,6 +134,11 @@ pre.prettyprint {
   width: 50%;
 }
 
+iframe{
+  width: 100%;
+  height: 100vh;
+}
+
 .links {
   font-family: Bitter;
   margin-top: 2rem;
